@@ -1,5 +1,7 @@
 # Dynamic Tilemap Controller
 
+[中文](https://github.com/make-game-modules/dynamic-tilemap-controller/blob/main/README.zh-cn.md)
+
 This project provides a Unity script for dynamically generating maps based on the character's movement and regularly removing maps that are too far from the character to maintain performance. By setting properties, you can control the range of map generation, update threshold, removal interval, and removal distance.
 
 ## How to Install

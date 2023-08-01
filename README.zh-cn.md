@@ -1,7 +1,5 @@
 # 动态地图生成控制器
 
-[English](https://github.com/make-game-modules/dynamic-tilemap-controller/blob/main/README.md)
-
 这个项目提供了一个 Unity 脚本，用于根据角色的移动动态生成地图，并定时移除离角色过远的地图，以保持性能。通过设置属性，您可以控制地图的生成范围、更新阈值、移除间隔和移除距离。
 
 ## 如何安装
@@ -14,7 +12,7 @@
 
 ## 参数设置
 
-1. `Tilemap tilemap`: 要操作的Tilemap组件
+1. `Tilemap tilemap`: 要操作的 Tilemap 组件
 2. `TileBase tile`: 要生成的地图瓦片
 3. `float visibilityMultiplier`: 地图的可见范围相对于相机视野的倍数
 4. `float edgeThresholdPercentage`: 当角色移动到地图边缘的百分比时，触发地图更新
