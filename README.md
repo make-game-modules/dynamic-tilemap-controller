@@ -1,6 +1,6 @@
-# Camera Follow Character Controller
+# Dynamic Tilemap Controller
 
-This project provides a Unity script that makes the camera follow the character's movement smoothly. This script needs to be attached to the camera.
+This project provides a Unity script for dynamically generating maps based on the character's movement and regularly removing maps that are too far from the character to maintain performance. By setting properties, you can control the range of map generation, update threshold, removal interval, and removal distance.
 
 ## How to Install
 
@@ -8,18 +8,20 @@ In your Unity project, clone this repository at any location using Git.
 
 ## How to Use
 
-1. Attach this script to the main camera.
-2. Set the public properties of the script in the Unity editor.
+Mount this script to the main character.
 
 ## Parameter Settings
 
-- `playerTransform`: The Transform component of the character to follow. Set this property in the Unity editor to point to the character's Transform component.
-- `smoothSpeed`: The parameter that controls the smoothness of the camera movement. The larger the value, the faster the camera follows the character, and vice versa.
-- `offset`: The offset of the camera relative to the character. Set this property in the Unity editor to control the camera's perspective.
+1. `Tilemap tilemap`: The Tilemap component to operate
+2. `TileBase tile`: The map tile to be generated
+3. `float visibilityMultiplier`: The visible range of the map relative to the camera's field of view multiplier
+4. `float edgeThresholdPercentage`: When the character moves to a certain percentage of the map edge, the map update is triggered
+5. `float removalInterval`: The removal interval (seconds) of the map tile
+6. `float removalDistanceMultiplier`: The removal distance of the map tile relative to the camera's field of view multiplier
 
 ## Operating Principle
 
-At each physical update, the script calculates the target position of the camera and smoothly moves the camera using the Lerp function, achieving a smooth follow effect.
+This script checks every frame if the character has moved to the edge of the map. If so, it updates the map and regularly removes map tiles that are too far from the character to maintain performance.
 
 ## Copyright Information
 
